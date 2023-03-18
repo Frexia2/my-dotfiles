@@ -11,4 +11,18 @@ alacritty
 
 nitrogen
 
-i3-stack-master(https://github.com/windwp/i3-master-stack)
+i3-stack-master (https://github.com/windwp/i3-master-stack)
+
+## for Polybar:
+hack-nerd-font-mono
+
+playerctl
+
+### Polybar plugins (https://github.com/polybar/polybar-scripts):
+player-mpris-simple
+
+battery-combined-udev
+
+info-kernel 
+
+put all of that in .config/polybar/polybar-scripts/ folder. Dont forget to make them executable!

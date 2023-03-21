@@ -18,11 +18,14 @@ hack-nerd-font-mono
 
 playerctl
 
+
 ### Polybar plugins (https://github.com/polybar/polybar-scripts):
 player-mpris-simple
 
 battery-combined-udev
 
 info-kernel 
+
+polybar-cava (https://github.com/ray-pH/polybar-cava)
 
 put all of that in .config/polybar/polybar-scripts/ folder. Dont forget to make them executable!

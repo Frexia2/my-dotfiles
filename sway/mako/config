@@ -1,0 +1,11 @@
+max-history=2
+background-color=#141216
+text-color=#ffe6f2
+width=300
+height=70
+border-size=1
+border-color=#ffe6f2
+icons=0
+default-timeout=5000
+layer=top
+anchor=bottom-right

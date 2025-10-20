@@ -10,6 +10,10 @@ set $term foot
 
 set $menu wmenu-run
 
+font monospace 10
+
+exec udiskie
+
 output * bg ~/Pictures/0f6oxa9y9jlb1.png fill
 #
 # Example configuration:
@@ -35,13 +39,18 @@ output * bg ~/Pictures/0f6oxa9y9jlb1.png fill
 #
 # Example configuration:
 #
-   input type:touchpad {
-       dwt enabled
-       tap enabled
-       natural_scroll enabled
-       middle_emulation enabled
-   }
+#   input type:touchpad {
+#       dwt enabled
+#       tap enabled
+#       natural_scroll enabled
+#       middle_emulation enabled
+#   }
 #
+
+   input type:touchpad {
+ 	 events disabled
+   }
+
    input type:keyboard {
        xkb_layout us,ru
        xkb_options grp:lalt_lshift_toggle
@@ -63,6 +72,8 @@ client.focused_inactive #330066 #141216 #ffe6f2 #330066 #330066
 client.unfocused	#330066 #141216 #ffe6f2 #330066 #330066
 client.urgent		#ecb3ff #141216 #ffe6f2 #ecb3ff #ecb3ff
 client.placeholder	#330066 #141216 #ffe6f2 #330066 #330066
+
+seat seat0 xcursor_theme Bibata-Modern-Classic 16
 
 ### Key bindings
 
@@ -145,7 +156,7 @@ client.placeholder	#330066 #141216 #ffe6f2 #330066 #330066
     bindsym $mod+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
-    bindsym $mod+Shift+space floating toggle
+    bindsym Mod1+f floating toggle
 
     # Swap focus between the tiling area and the floating area
     bindsym $mod+space focus mode_toggle
@@ -200,7 +211,7 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     bindsym Print exec grim - | wl-copy
-#
+    bindsym Shift+Print exec grim -g "$(slurp)" - | wl-copy
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.

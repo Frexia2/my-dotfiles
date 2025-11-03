@@ -24,6 +24,12 @@ player-mpris-simple
 
 battery-combined-udev
 
+## for sway:
+playerctl
+jq
+pactl
+pamixer
+
 info-kernel 
 
 polybar-cava (https://github.com/ray-pH/polybar-cava)

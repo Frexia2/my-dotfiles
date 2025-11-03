@@ -16,7 +16,7 @@ set $menu wmenu-run
 
 font monospace 10
 
-output * bg ~/Pictures/0f6oxa9y9jlb1.png fill
+output * bg ~/Pictures/wallpaper.jpg fill
 
    input type:touchpad {
  	 events disabled
@@ -24,7 +24,7 @@ output * bg ~/Pictures/0f6oxa9y9jlb1.png fill
 
    input type:keyboard {
        xkb_layout us,ru
-       xkb_options grp:alt_shift_toggle
+       xkb_options grp:caps_toggle
    }
 
 gaps inner 4
@@ -33,7 +33,7 @@ gaps outer 2
 default_border pixel 3
 default_floating_border pixel 3
 
-client.focused 		#4d0099 #141216 #ffe6f2 #4d0099 #4d0099
+client.focused 		#7733ff #141216 #ffe6f2 #7733ff #7733ff
 client.focused_inactive #330066 #141216 #ffe6f2 #330066 #330066
 client.unfocused	#330066 #141216 #ffe6f2 #330066 #330066
 client.urgent		#ecb3ff #141216 #ffe6f2 #ecb3ff #ecb3ff
@@ -131,13 +131,18 @@ seat seat0 xcursor_theme Bibata-Modern-Classic 16
 mode "resize" {
 
     bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
+    bindsym $down resize shrink height 10px
+    bindsym $up resize grow height 10px
     bindsym $right resize grow width 10px
 
+    bindsym $left_ru resize shrink width 10px
+    bindsym $down_ru resize shrink height 10px
+    bindsym $up_ru resize grow height 10px
+    bindsym $right_ru resize grow width 10px
+
     bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
+    bindsym Down resize shrink height 10px
+    bindsym Up resize grow height 10px
     bindsym Right resize grow width 10px
 
     bindsym Return mode "default"
@@ -160,8 +165,7 @@ bar {
     position bottom
 
 	status_command ~/.config/sway/sway-bar.sh
-
-	colors {
+    colors {
         statusline #ffffff
         background #323232
         inactive_workspace #323232 #323232 #5c5c5c

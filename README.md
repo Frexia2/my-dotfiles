@@ -34,6 +34,10 @@ playerctl
 
 jq
 
+pactl
+
+pamixer
+
 ## for dwm:
 
 feh
@@ -41,5 +45,3 @@ feh
 picom
 
 terminus font
-pactl
-pamixer

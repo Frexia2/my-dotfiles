@@ -59,6 +59,6 @@ if [ -n "$failsafe" ]; then
 	dbus-run-session &
 	feh --bg-fill ~/Pictures/catherine.jpg
 	picom --daemon &
-	gentoo-pipewire-launcher &
+#	gentoo-pipewire-launcher & -- uncomment if it's still neccessary to run for pipewire
 	exec dwm
 fi

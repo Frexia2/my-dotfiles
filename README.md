@@ -1,6 +1,10 @@
 # my-dotfiles
 It contains a lot of configs that i usually use for various programs. Some of them has only minor changes, but some can be drastically changed from default. 
-Dont expect to much from me, but if i'll do something cool, it will be here.
+Dont expect too much from me, but if i'll do something cool, it will be here.
+
+
+<img width="1599" height="899" alt="image" src="https://github.com/user-attachments/assets/3e4f3e0c-0e2e-41c5-85e9-52563fa656a4" />
+
 
 # Dependencies
 ## for i3:
@@ -37,6 +41,7 @@ jq
 pactl
 
 pamixer
+
 
 ## for dwm:
 

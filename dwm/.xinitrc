@@ -56,9 +56,10 @@ if [ -d "$xinitdir"/xinitrc.d ] ; then
 fi
 
 if [ -n "$failsafe" ]; then
-	dbus-run-session &
 	feh --bg-fill ~/Pictures/catherine.jpg
 	picom --daemon &
 #	gentoo-pipewire-launcher & -- uncomment if it's still neccessary to run for pipewire
+	setxkbmap -layout "us,ru" -variant "," -option "grp:caps_toggle"
+	~/.dwm/status.sh &
 	exec dwm
 fi

@@ -14,7 +14,7 @@ set $right_ru Cyrillic_de
 set $term foot
 set $menu wmenu-run
 
-font monospace 10
+font JetBrainsMono Nerd Font Mono 10
 
 output * bg ~/Pictures/wallpaper.jpg fill
 
@@ -164,12 +164,12 @@ bindsym $mod+Cyrillic_ka mode "resize"
 bar {
     position bottom
 
-	status_command ~/.config/sway/sway-bar.sh
+  status_command ~/.config/sway/sway-bar.sh
     colors {
         statusline #ffffff
-        background #323232
-        inactive_workspace #323232 #323232 #5c5c5c
-	focused_workspace #323232 #7733ff #ffe6f2
+        background #000000
+        inactive_workspace #000000 #000000 #5c5c5c
+	focused_workspace #000000 #7733ff #ffe6f2
     }
 }
 

@@ -1,12 +1,9 @@
-
 status_bar() {
-    date=$(date +'%d-%m-%Y %X')
+    date=$(date +'%d-%m-%Y %H:%M')
     vol=$(pamixer --get-volume)
     battery_status=$(cat /sys/class/power_supply/BAT0/uevent | grep "POWER_SUPPLY_CAPACITY=" | cut -d= -f2) 
 #   linux_version=$(uname -r | cut -d '-' -f1)
     current_layout=$(swaymsg -t get_inputs | jq -r '.[] | select(.type=="keyboard") | .xkb_active_layout_name' | head -n1)
-    cpu=$(top -bn1 | grep "Cpu(s)" | awk '{print $2}' | cut -d'%' -f1)
-    ram=$(free | awk 'NR==2{printf "%.0f", $3/$2 * 100}')
 
 # i have lost it
     if command -v brightnessctl >/dev/null 2>&1; then
@@ -32,7 +29,7 @@ status_bar() {
         brightness_display="br:/A"
     fi
 
-    echo "|vol:$vol%|bat:$battery_status%|cpu:${cpu}%|ram:${ram}%|$brightness_display|$date|$current_layout"
+    echo "|vol:$vol%|bat:$battery_status%|$brightness_display|$date|$current_layout"
 }
 
 audio_status() {
@@ -56,14 +53,13 @@ network_status() {
 
 media_status() {
     if playerctl status >/dev/null 2>&1; then
-        status=$(playerctl status)
         artist=$(playerctl metadata artist 2>/dev/null || echo "")
         title=$(playerctl metadata title 2>/dev/null)
 
         if [ -n "$artist" ]; then
-            echo "${artist:0:15} - ${title:0:20}|"
+            echo "${artist} - ${title}|"
         else
-            echo "${title:0:35}|"
+            echo "${title}|"
         fi
     else
         echo ""
@@ -72,9 +68,9 @@ media_status() {
 
 vpn_status() {
     if ip addr | grep -q "tun0"; then
-        echo "ovpn|"
+        echo "ovpn:"
     elif ip addr | grep -q "wg0"; then
-        echo "wg|"
+        echo "wg:"
     else
         echo ""
     fi
@@ -84,5 +80,3 @@ while true; do
 	echo "$(media_status)$(vpn_status)$(network_status)$(audio_status)$(status_bar)"
     sleep 1
 done
-
-

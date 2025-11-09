@@ -12,8 +12,7 @@ set $up_ru Cyrillic_sha
 set $right_ru Cyrillic_de
 
 set $term foot
-set $menu wmenu-run
-
+set $menu wmenu-run -f "JetbrainsMono Nerd Font Mono 10" -N "#000000" -n"#ffffff" -M "#000000" -m "#cc5c6c" -S "#7733ff" -s "#ffe6f2"
 font JetBrainsMono Nerd Font Mono 10
 
 output * bg ~/Pictures/wallpaper.jpg fill

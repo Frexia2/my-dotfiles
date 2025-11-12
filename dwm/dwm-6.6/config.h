@@ -9,7 +9,10 @@ static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 1;        /* 0 means bottom bar */
+static const int topbar             = 1;	/* 0 means bottom bar */
+static const char *upvol[]      = { "/usr/bin/wpctl",   "set-volume", "@DEFAULT_AUDIO_SINK@",      "5%+",      NULL };
+static const char *downvol[]    = { "/usr/bin/wpctl",   "set-volume", "@DEFAULT_AUDIO_SINK@",      "5%-",      NULL };
+static const char *mutevol[]    = { "/usr/bin/wpctl",   "set-mute",   "@DEFAULT_AUDIO_SINK@",      "toggle",   NULL };
 static const char *fonts[]          = { "Terminus:size=10:antialias=false" };
 static const char dmenufont[]       = "Terminus:size=10:antialias=false";
 static const char col_gray1[]       = "#141216";
@@ -95,6 +98,9 @@ static const Key keys[] = {
 	{ SPRKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ SPRKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ SPRKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	{ 0,				XF86XK_AudioLowerVolume, spawn,	{.v = downvol } },
+	{ 0,				XF86XK_AudioMute,	 spawn,	{.v = mutevol } },
+	{ 0,				XF86XK_AudioRaiseVolume, spawn,	{.v = upvol   } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)

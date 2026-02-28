@@ -36,6 +36,8 @@ terminus font
 
 ## for sxwm:
 
+feh
+
 sxbar
 
 xnap (same dev as sxwm)

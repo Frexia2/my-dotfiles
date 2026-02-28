@@ -9,9 +9,10 @@ Dont expect too much from me, but if i'll do something cool, it will be here.
 <img width="1280" height="800" alt="image" src="https://github.com/user-attachments/assets/c81393f2-8fb9-4d64-bbb0-897ec899bdf1" />
 
 
-# Dependencies
+<img width="1365" height="767" alt="2026-02-28_15-56" src="https://github.com/user-attachments/assets/d0e3eb3b-0595-4269-8dbd-75d1e4a7d2af" />
 
-JetBrains Mono Nerd Font Mono
+
+# Dependencies
 
 ## for sway:
 
@@ -23,6 +24,7 @@ pactl
 
 pamixer
 
+JetBrains Mono Nerd Font Mono
 
 ## for dwm:
 
@@ -31,3 +33,14 @@ feh
 picom
 
 terminus font
+
+## for sxwm:
+
+xnap (same dev as sxwm)
+
+wpctl (comes with wireplumber)
+
+jetbrains-fonts package
+
+xkblayout-state
+

@@ -36,6 +36,8 @@ terminus font
 
 ## for sxwm:
 
+sxbar
+
 xnap (same dev as sxwm)
 
 wpctl (comes with wireplumber)

@@ -12,6 +12,9 @@ Dont expect too much from me, but if i'll do something cool, it will be here.
 <img width="1365" height="767" alt="2026-02-28_15-56" src="https://github.com/user-attachments/assets/d0e3eb3b-0595-4269-8dbd-75d1e4a7d2af" />
 
 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/da8470a9-3629-4957-8b25-af3dd5bf4dc6" />
+
+
 # Dependencies
 
 ## for sway:
@@ -47,4 +50,20 @@ wpctl (comes with wireplumber)
 jetbrains-fonts package
 
 xkblayout-state
+
+## for niri:
+
+jetbrains-fonts package
+
+swww-daemon
+
+mako
+
+foot
+
+## misc programs I use:
+
+abaddon
+
+qutebrowser
 

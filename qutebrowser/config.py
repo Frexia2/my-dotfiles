@@ -48,7 +48,7 @@ c.tabs.title.format = "{audio}{current_title}"
 
 c.url.default_page = 'https://duckduckgo.com/'
 c.url.searchengines = {
-        '!ddg': 'https://duckduckgo.com/?=q{}',
+        'DEFAULT': 'https://duckduckgo.com/?t=ffab&q={}+&ia=web',
         '!gh': 'https://github.com/search?=o=desc&q={}',
         '!yt': 'https://www.youtube.com/results?search_query={}',
         }

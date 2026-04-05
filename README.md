@@ -14,6 +14,8 @@ Dont expect too much from me, but if i'll do something cool, it will be here.
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/da8470a9-3629-4957-8b25-af3dd5bf4dc6" />
 
+<img width="1365" height="767" alt="image" src="https://github.com/user-attachments/assets/b2ea1bee-3020-40b7-a2c9-1eb056a1dc20" />
+
 
 # Dependencies
 
@@ -60,6 +62,14 @@ swww-daemon
 mako
 
 foot
+
+## for openbox:
+
+terminus-fonts
+
+feh
+
+xnap
 
 ## misc programs I use:
 

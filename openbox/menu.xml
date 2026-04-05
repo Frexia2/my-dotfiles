@@ -1,1 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/ file:///usr/share/openbox/menu.xsd">
+
+  <menu id="root-menu" label="Openbox 3">
+    <item label="terminal">
+      <action name="Execute">
+        <command>uxterm -bg black -fg white</command>
+      </action>
+    </item>
+    <item label="vim">
+      <action name="Execute">
+        <command>uxterm -bg black -fg white && vim</command>
+      </action>
+    </item>
+    <item label="qutebrowser">
+      <action name="Execute">
+        <command>qutebrowser</command>
+      </action>
+    </item>
+    <item label="pcmanfm">
+      <action name="Execute">
+        <command>pcmanfm</command>
+      </action>
+    </item>
+
+    <!-- Applications submenu -->
+    <separator/>
+    <menu id="applications" label="applications">
+      <item label="mullvad-vpn">
+        <action name="Execute">
+          <command>mullvad-vpn</command>
+        </action>
+      </item>
+      <item label="screen recorder">
+        <action name="Execute">
+          <command>peek</command>
+        </action>
+      </item>
+      <item label="vlc">
+        <action name="Execute">
+          <command>vlc</command>
+        </action>
+      </item>
+      <item label="telegram">
+	<action name="Execute">
+		<command>Telegram</command>
+	</action>
+      </item>
+      <item label="discord">
+       <action name="Execute">
+	       <command>abaddon</command>
+       </action>
+     </menu>
+     <!-- Screenshot -->
+      <menu id="screenshot" label="screenshot">
+        <item label="selection">
+          <action name="Execute">
+		  <command>bash -c 'xnap | pnmtopng | tee ~/Pictures/screenshots/$(date +%Y-%m-%d_%H-%M).png | xclip -selection clipboard -t image/png' </command>
+          </action>
+        </item>
+      </menu>
+
+      <!-- Settings -->
+      <menu id="settings" label="settings">
+        <item label="lxappearance">
+          <action name="Execute">
+            <command>lxappearance</command>
+          </action>
+        </item>
+        <item label="pavucontrol">
+          <action name="Execute">
+            <command>pavucontrol</command>
+          </action>
+        </item>
+      </menu>
+    </menu>
+
+    <!-- Openbox -->
+    <menu id="openbox" label="openbox">
+      <item label="reconfigure">
+        <action name="Reconfigure"/>
+      </item>
+      <item label="restart">
+        <action name="Restart"/>
+      </item>
+      <item label="exit">
+        <action name="Exit"/>
+      </item>
+    </menu>
+
+    <!-- System -->
+    <menu id="system" label="system">
+      <item label="sleep">
+        <action name="Execute">
+          <command>systemctl suspend</command>
+        </action>
+      </item>
+      <item label="reboot">
+        <action name="Execute">
+          <command>systemctl reboot</command>
+        </action>
+      </item>
+      <item label="shutdown">
+        <action name="Execute">
+          <command>systemctl poweroff</command>
+        </action>
+      </item>
+    </menu>
+  </menu>
+
+</openbox_menu>
 

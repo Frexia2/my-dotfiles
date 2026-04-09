@@ -150,7 +150,7 @@ taskbar_name_active_font_color = #c9cad3 100
 ##################################################
 # Taskbar buttons
 ##################################################
-task_icon = 1
+task_icon = 0
 task_text = 1
 task_centered = 0
 task_tooltip = 0

@@ -1,4 +1,6 @@
 config.load_autoconfig(False)
+c.fonts.default_family = ["Terminus", "JetBrainsMono"]
+c.fonts.default_size = '10pt'
 c.colors.completion.fg = '#ffffff'
 c.colors.completion.odd.bg = '#2e3440'
 c.colors.completion.even.bg = '#3b4252'

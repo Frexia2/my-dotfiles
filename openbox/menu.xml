@@ -4,12 +4,12 @@
   <menu id="root-menu" label="Openbox 3">
     <item label="terminal">
       <action name="Execute">
-        <command>uxterm -bg black -fg white</command>
+        <command>xterm -bg black -fg white</command>
       </action>
     </item>
     <item label="vim">
       <action name="Execute">
-        <command>uxterm -bg black -fg white && vim</command>
+        <command>xterm -bg black -fg white && vim</command>
       </action>
     </item>
     <item label="qutebrowser">
@@ -26,21 +26,36 @@
     <!-- Applications submenu -->
     <separator/>
     <menu id="applications" label="applications">
-      <item label="mullvad-vpn">
+      <item label="amneziavpn">
         <action name="Execute">
-          <command>mullvad-vpn</command>
+          <command>AmneziaVPN</command>
         </action>
       </item>
       <item label="screen recorder">
         <action name="Execute">
-          <command>peek</command>
+          <command>simplescreenrecorder</command>
         </action>
+      </item>
+      <item label="qbittorrent">
+        <action name="Execute">
+          <command>qbittorrent</command>
+  	</action>
+      </item>
+      <item label="kdenlive">
+	<action name="Execute">
+          <command>kdenlive</command>
+	 </action>
       </item>
       <item label="vlc">
         <action name="Execute">
           <command>vlc</command>
         </action>
       </item>
+      <item label="anki">
+	<action name="Execute">
+	  <command>anki</command>
+	</action>
+       </item>
       <item label="telegram">
 	<action name="Execute">
 		<command>Telegram</command>
@@ -72,6 +87,12 @@
             <command>pavucontrol</command>
           </action>
         </item>
+	<item label="obconf">
+	  <action name="Execute">
+	    <command>obconf-qt</command>
+	  </action>
+	</item>
+
       </menu>
     </menu>
 
